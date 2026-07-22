@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>TikTok OAuth — código</title></head>
+<body style="font-family: monospace; padding: 2rem;">
+<h2>Copia este código y pégalo en la Terminal:</h2>
+<pre id="codigo" style="background:#eee; padding:1rem; word-break:break-all;"></pre>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById('codigo').textContent = params.get('code') || '(no llegó código — revisa el error: ' + (params.get('error') || 'desconocido') + ')';
+</script>
+</body>
+</html>
